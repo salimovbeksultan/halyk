@@ -6,19 +6,19 @@ export default defineComponent({
   data() {
     return {
       iin: "",
-      found: null,
-      list: [{}],
+      found: null as any,
+      list: [{ iin: { _text: "" } }],
     };
   },
   methods: {
     formatIIN(event: any) {
-      if (event.target.value.length > this.iin.length ) {
+      if (event.target.value.length > this.iin.length) {
         this.iin = event.target.value;
         if (
           this.iin.length === 3 ||
           this.iin.length === 7 ||
           this.iin.length === 11
-        ) { 
+        ) {
           this.iin += " ";
         }
       } else {
@@ -26,13 +26,13 @@ export default defineComponent({
       }
     },
     search() {
-      let found = this.list.filter(el => el.iin._text === this.iinShortened);
+      let found = this.list.filter((el) => el.iin._text === this.iinShortened);
       if (found.length > 0) this.found = true;
       else this.found = false;
     },
   },
   computed: {
-    iinShortened() {
+    iinShortened(): string {
       return this.iin.replace(/\s/g, "");
     },
     response() {
@@ -72,7 +72,7 @@ export default defineComponent({
 </script>
 
 <script setup lang="ts">
-const camera = ref(null);
+const camera = ref();
 </script>
 
 <template>
@@ -89,7 +89,7 @@ const camera = ref(null);
         :value="iin"
         @input="formatIIN"
       />
-      <button @click="camera?.click()" class="camera-button">
+      <button @click="camera.click()" class="camera-button">
         <img class="button-icon" alt="camera" src="@/assets/camera.svg" />
       </button>
       <input ref="camera" class="hidden" type="file" capture="environment" />
