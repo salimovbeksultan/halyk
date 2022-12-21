@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+#app {
+  background-color: #f5f5f5;
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-header {
+  text-align: center;
+  margin-left: 30vw;
+  margin-right: 30vw;
+  margin-top: 6vh;
+  margin-bottom: 5vh;
+}
+
+.input-group {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  height: 8vh;
+  border: 1px solid #F4DBDB;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.camera-button {
+  height: 8vh;
+  width: 8vh;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.button-icon {
+  height: 15px;
+  width: 15px;
+}
+
+.iin-input {
+  background-color: transparent;
+  width: 70vw;
+  border: none;
+  height: 100%;
+  color: #000000 !important;
+  text-indent: 6vw;
+}
+
+.search-group {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: 1vh;
+  height: 6vh;
+  display: flex;
+  justify-content: stretch;
+}
+
+.search-button {
+  height: 100%;
+  width: 100%;
+  background: #CBE3E9;
+  border-radius: 6px;
+  border: none;
+}
+
+.description-block {
+  text-align: center;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B58080;
+  margin-top: auto;
+  margin-bottom: 5vh;
+}
+
+.client-block {
+  margin-top: auto;
+  text-align: center;
+  margin-right: 22vw;
+  margin-left: 22vw;
+}
+
+.hidden {
+  display: none;
+}
+
+.found-text {
+  color: #F01414;
+}
+
+.not-found-text {
+  color: #3E60B6;
+}
